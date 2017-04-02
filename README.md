@@ -90,7 +90,7 @@ The code for calculating the accuracy of the model is located in the ninth cell 
 
 My final model results were:
 * training set accuracy of 90.3%
-* validation set accuracy of 92 %
+* validation set accuracy of 93.1 %
 * test set accuracy of 92.1%
 
 
