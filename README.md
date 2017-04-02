@@ -24,8 +24,7 @@
 [image7]: ./sample_images/stop1.png "Traffic Sign 4"
 [image8]: ./sample_images/row.png   "Traffic Sign 5"
 [image9]: ./cross_entropy.png      "Cross entropy Result"
-
-
+[image10]: ./model_graph.png      "Model Architecture"
 ### Data Set Summary & Preprocessing
 
 #### 1.Data Set Summary
@@ -65,6 +64,7 @@ signs data set:
 
 
 #### 3. Final Model
+![alt text][image10]
 
 The code for my final model is located in the 16th cell of the ipython notebook. 
 
@@ -100,10 +100,13 @@ My final model results were:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image4] 
+![alt text][image5]
+![alt text][image6] 
+![alt text][image7] 
+![alt text][image8]
 
-The first image might be difficult to classify because ...
+The first image might be difficult to classify because The 30km/h limit image and Round -about Mandatory image contain getty images label and some number on it which might give wrong answer if my model cannot catch key characteristic of image. Overall images on the web is much more brighter than our original images. 
 
 #### 2.
 
@@ -120,14 +123,20 @@ Here are the results of the prediction:
 | Right of way at next. | Right of way at next.   						|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 60%. 
-Although It show us the much worse result than german traffic dataset. We need further investigation more bigger traning set. 
-
+The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. 
+It is much worse than the old test-set result. 
 #### 3. Predicted Probabilty on test data set
 ![alt text][image9] 
 
-* We can verify that our model get wrong answer on image which have getty images label. We can verify that the part which human's ignore can make crucial difference to the model. 
-* It will be limit of our model
+* We can verify that our model classify correctly  keep left image, Right of way at the next intersection image and stop image
+
+* My model give wrong answer on RoundaboutMandatory as 30 km/h limit image but it also consider original correct answer with high probability
+
+* Our model is completly wrong on the speed 60 km/h limit sign 
+
+* We can verify that our model get wrong answer on image which have getty images label. We can verify that the part which human's ignore can make crucial difference to the model.
+
+* The part behind label might take crucial point to classify image. 
 
 ### Mistake I made. 
 
